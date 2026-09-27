@@ -12,25 +12,30 @@ const geistMono = Geist_Mono({
   subsets: ["latin"],
 });
 
+const title = "Jays Place | Coming Soon";
+const description =
+  "A new place to move, reset, and reconnect. Jays Place is a wellness and recreational center coming soon.";
+
 export const metadata: Metadata = {
-  metadataBase: new URL(process.env.NEXT_PUBLIC_SITE_URL ?? "http://localhost:3000"),
+  metadataBase: new URL(
+    process.env.NEXT_PUBLIC_SITE_URL ?? "http://localhost:3000",
+  ),
   title: {
-    default: "Jaysplace | A considered Next.js starter",
-    template: "%s | Jaysplace",
+    default: title,
+    template: "%s | Jays Place",
   },
-  description:
-    "A fast, accessible Next.js foundation with TypeScript, Tailwind CSS, and thoughtful production defaults.",
+  description,
   openGraph: {
-    title: "Jaysplace | A considered Next.js starter",
-    description:
-      "A fast, accessible Next.js foundation with thoughtful production defaults.",
+    title,
+    description,
     type: "website",
+    images: ["/opengraph-image"],
   },
   twitter: {
     card: "summary_large_image",
-    title: "Jaysplace | A considered Next.js starter",
-    description:
-      "A fast, accessible Next.js foundation with thoughtful production defaults.",
+    title,
+    description,
+    images: ["/opengraph-image"],
   },
 };
 

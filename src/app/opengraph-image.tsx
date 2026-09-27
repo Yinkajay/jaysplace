@@ -1,6 +1,6 @@
 import { ImageResponse } from "next/og";
 
-export const alt = "Jaysplace, a considered place to start";
+export const alt = "Jays Place coming soon";
 export const size = { width: 1200, height: 630 };
 export const contentType = "image/png";
 
@@ -9,25 +9,24 @@ export default function OpenGraphImage() {
     <div
       style={{
         alignItems: "center",
-        background: "#131209",
-        color: "#f5efe8",
+        background: "#efeee8",
+        color: "#1f1f1f",
         display: "flex",
         height: "100%",
         justifyContent: "center",
-        padding: "80px",
+        padding: "64px",
         width: "100%",
       }}
     >
       <div
         style={{
-          alignItems: "flex-start",
-          border: "2px solid #313131",
-          borderRadius: "32px",
+          border: "2px solid #d7d9cc",
+          borderRadius: "24px",
           display: "flex",
           flexDirection: "column",
           height: "100%",
           justifyContent: "space-between",
-          padding: "64px",
+          padding: "56px",
           width: "100%",
         }}
       >
@@ -43,22 +42,22 @@ export default function OpenGraphImage() {
           <div
             style={{
               alignItems: "center",
-              background: "#ffb000",
+              background: "#1f1f1f",
               borderRadius: 999,
-              color: "#131209",
+              color: "#f7f5ef",
               display: "flex",
               height: 56,
               justifyContent: "center",
               width: 56,
             }}
           >
-            J
+            J.
           </div>
-          Jaysplace
+          Jays Place
         </div>
         <div style={{ display: "flex", flexDirection: "column" }}>
-          <div style={{ color: "#ffb000", fontSize: 24, fontWeight: 600 }}>
-            Your workspace is ready
+          <div style={{ color: "#60745d", fontSize: 24, fontWeight: 600 }}>
+            WELLNESS AND RECREATION
           </div>
           <div
             style={{
@@ -70,7 +69,10 @@ export default function OpenGraphImage() {
               maxWidth: 900,
             }}
           >
-            Your next idea has a proper place to start.
+            A new place to feel more alive.
+          </div>
+          <div style={{ color: "#60745d", fontSize: 24, marginTop: 24 }}>
+            Coming soon
           </div>
         </div>
       </div>

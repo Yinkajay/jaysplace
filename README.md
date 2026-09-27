@@ -1,24 +1,23 @@
-# Jaysplace
+# Jays Place
 
-A polished Next.js starter built with the App Router, TypeScript, Tailwind CSS, and a small accessible interaction layer.
+A first iteration of the coming soon landing page for Jays Place, an upcoming wellness and recreational center.
 
-## Start locally
-
-    npm run dev
-
-Open http://localhost:3000 and edit src/app/page.tsx to begin.
-
-## Available commands
+## Run locally
 
     npm run dev
-    npm run lint
-    npm run build
-    npm run start
+
+Open http://localhost:3000.
 
 ## Project map
 
-- src/app contains routes, metadata, global styles, and route states.
-- src/components contains the small client components used for navigation and scroll reveals.
-- public is available for static assets.
+- `src/app/page.tsx` contains the landing page copy and sections.
+- `src/app/globals.css` contains the visual system and responsive layout.
+- `src/app/layout.tsx` contains search and sharing metadata.
+- `public/Exterior.webp` is the optimized exterior image used in the hero.
 
-Before launch, replace the starter metadata, domain, privacy notice, terms, and copy with details that match the real product.
+Before launch, confirm the opening details, location, offering, contact information, privacy notice, terms, and `NEXT_PUBLIC_SITE_URL` for the deployed domain.
+
+## Checks
+
+    npm run lint
+    npm run build
