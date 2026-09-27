@@ -87,12 +87,9 @@ summary:focus-visible {
 .hero-frame {
   position: relative;
   isolation: isolate;
-  width: calc(100% - 32px);
-  max-width: 1800px;
-  min-height: 760px;
-  margin: 16px auto 0;
+  width: 100%;
+  min-height: 100svh;
   overflow: hidden;
-  border-radius: 16px;
   background: #839caa;
   color: var(--paper);
 }
@@ -233,8 +230,7 @@ summary:focus-visible {
 }
 
 .header-link,
-.primary-link,
-.closing-link {
+.primary-link {
   display: inline-flex;
   align-items: center;
   justify-content: center;
@@ -257,21 +253,18 @@ summary:focus-visible {
 }
 
 .header-link:hover,
-.primary-link:hover,
-.closing-link:hover {
+.primary-link:hover {
   transform: translateY(-2px);
   background: var(--soft);
 }
 
 .header-link:active,
-.primary-link:active,
-.closing-link:active {
+.primary-link:active {
   transform: scale(0.98);
 }
 
 .header-link:focus-visible,
-.primary-link:focus-visible,
-.closing-link:focus-visible {
+.primary-link:focus-visible {
   outline-color: var(--paper);
 }
 
@@ -295,24 +288,14 @@ summary:focus-visible {
 .hero-bottom {
   position: absolute;
   z-index: 5;
-  right: 48px;
-  bottom: 48px;
-  left: 48px;
-  display: flex;
-  align-items: flex-end;
-  justify-content: space-between;
-  gap: 32px;
+  right: 64px;
+  bottom: 64px;
+  left: 64px;
 }
 
-.hero-copy-card {
-  width: min(100%, 560px);
-  border: 1px solid rgb(255 255 255 / 0.52);
-  border-radius: 16px;
-  background: rgb(247 245 239 / 0.94);
-  padding: 32px;
-  color: var(--ink);
-  box-shadow: 0 24px 64px rgb(31 31 31 / 0.12);
-  backdrop-filter: blur(24px);
+.hero-copy {
+  width: min(100%, 680px);
+  color: var(--paper);
   animation: enter-up 900ms var(--ease-fluid) both;
 }
 
@@ -326,100 +309,46 @@ summary:focus-visible {
 }
 
 .hero-eyebrow {
-  display: flex;
-  align-items: center;
-  gap: 8px;
-  color: var(--sage);
+  color: var(--paper);
+  font-size: 16px;
+  line-height: 24px;
   text-transform: uppercase;
   letter-spacing: 0.12em;
+  text-shadow: 0 2px 16px rgb(0 0 0 / 0.8);
 }
 
-.status-dot {
-  width: 8px;
-  height: 8px;
-  border-radius: 9999px;
-  background: var(--sage);
-  box-shadow: 0 0 0 4px rgb(96 116 93 / 0.16);
-}
 
-.hero-copy-card h1 {
+.hero-copy h1 {
   max-width: 680px;
   margin: 16px 0 0;
-  background-image: linear-gradient(90deg, #000000, #666666);
-  background-clip: text;
-  color: transparent;
-  font-size: 48px;
+  color: var(--paper);
+  font-size: 72px;
   line-height: 1;
   font-weight: 600;
   letter-spacing: -0.04em;
+  text-shadow: 0 2px 24px rgb(0 0 0 / 0.75);
   text-wrap: balance;
 }
 
 .hero-description {
   max-width: 680px;
   margin: 24px 0 0;
-  color: #525651;
-  font-size: 18px;
-  line-height: 28px;
+  color: var(--paper);
+  font-size: 24px;
+  line-height: 32px;
+  text-shadow: 0 2px 16px rgb(0 0 0 / 0.85);
   text-wrap: pretty;
 }
 
 .primary-link {
-  margin-top: 32px;
+  margin-top: 24px;
+  background: var(--paper);
+  color: var(--ink);
+  box-shadow: 0 2px 12px rgb(0 0 0 / 0.24);
 }
 
-.hero-aside {
-  width: 224px;
-  border: 1px solid rgb(255 255 255 / 0.35);
-  border-radius: 16px;
-  background: rgb(31 31 31 / 0.72);
-  padding: 24px;
-  color: var(--paper);
-  backdrop-filter: blur(24px);
-}
-
-.hero-aside-number,
-.hero-aside > span:last-child {
-  font-size: 12px;
-  line-height: 16px;
-  letter-spacing: 0.08em;
-}
-
-.hero-aside p {
-  margin: 40px 0 24px;
-  font-size: 24px;
-  line-height: 32px;
-  font-weight: 600;
-  text-wrap: balance;
-}
-
-.hero-aside-line {
-  display: block;
-  width: 100%;
-  height: 1px;
-  margin-bottom: 16px;
-  background: rgb(247 245 239 / 0.4);
-}
-
-.hero-scroll {
-  position: absolute;
-  z-index: 5;
-  right: 48px;
-  bottom: 16px;
-  display: inline-flex;
-  align-items: center;
-  gap: 12px;
-  border-radius: 9999px;
-  color: var(--paper);
-  font-size: 12px;
-  line-height: 16px;
-  font-weight: 600;
-  text-decoration: none;
-  transition: transform 700ms var(--ease-fluid);
-}
-
-.hero-scroll:hover {
-  transform: translateY(2px);
+.primary-link:hover {
+  background: #fff;
 }
 
 .section-container {
@@ -446,8 +375,7 @@ summary:focus-visible {
 }
 
 .vision-intro h2,
-.questions-intro h2,
-.closing-content h2 {
+.questions-intro h2 {
   margin: 0;
   font-size: 48px;
   line-height: 1;
@@ -624,26 +552,6 @@ summary:focus-visible {
   transform: rotate(45deg);
 }
 
-.closing-section {
-  padding: 96px 0;
-}
-
-.closing-content {
-  display: flex;
-  align-items: flex-end;
-  justify-content: space-between;
-  gap: 32px;
-}
-
-.closing-content h2 {
-  max-width: 680px;
-  margin-top: 24px;
-}
-
-.closing-link {
-  flex: none;
-}
-
 .site-footer {
   background: var(--ink);
   padding: 48px 0;
@@ -762,11 +670,6 @@ summary:focus-visible {
 }
 
 @media (min-width: 1024px) {
-  .hero-frame {
-    min-height: 0;
-    aspect-ratio: 2200 / 1264;
-  }
-
   .hero-giant {
     top: 5%;
     font-size: 128px;
@@ -784,9 +687,7 @@ summary:focus-visible {
   }
 
   .hero-nav,
-  .hero-index,
-  .hero-aside,
-  .hero-scroll {
+  .hero-index {
     display: none;
   }
 
@@ -794,6 +695,15 @@ summary:focus-visible {
     right: 24px;
     bottom: 24px;
     left: 24px;
+  }
+
+  .hero-copy h1 {
+    font-size: 60px;
+  }
+
+  .hero-description {
+    font-size: 20px;
+    line-height: 28px;
   }
 
   .vision-intro,
@@ -814,18 +724,15 @@ summary:focus-visible {
 
 @media (max-width: 639px) {
   .hero-frame {
-    width: calc(100% - 16px);
-    min-height: 740px;
-    margin-top: 8px;
-    border-radius: 12px;
+    min-height: max(100svh, 640px);
   }
 
   .hero-photo {
-    object-position: 57% center;
+    object-position: 60% center;
   }
 
   .hero-tint {
-    background: rgb(31 31 31 / 0.08);
+    background: rgb(31 31 31 / 0.14);
   }
 
   .hero-header {
@@ -841,10 +748,7 @@ summary:focus-visible {
   }
 
   .header-link {
-    gap: 8px;
-    padding: 8px;
-    font-size: 12px;
-    line-height: 16px;
+    display: none;
   }
 
   .hero-giant {
@@ -856,24 +760,19 @@ summary:focus-visible {
   }
 
   .hero-bottom {
-    right: 12px;
-    bottom: 12px;
-    left: 12px;
+    right: 24px;
+    bottom: 32px;
+    left: 24px;
   }
 
-  .hero-copy-card {
-    padding: 24px;
-    backdrop-filter: blur(32px);
-  }
-
-  .hero-copy-card h1 {
-    font-size: 36px;
-    line-height: 40px;
+  .hero-copy h1 {
+    font-size: 48px;
+    line-height: 1;
   }
 
   .hero-description {
-    font-size: 16px;
-    line-height: 24px;
+    font-size: 18px;
+    line-height: 28px;
   }
 
   .primary-link {
@@ -885,14 +784,12 @@ summary:focus-visible {
   }
 
   .vision-section,
-  .questions-section,
-  .closing-section {
+  .questions-section {
     padding: 80px 0;
   }
 
   .vision-intro h2,
-  .questions-intro h2,
-  .closing-content h2 {
+  .questions-intro h2 {
     font-size: 36px;
     line-height: 40px;
   }
@@ -916,7 +813,6 @@ summary:focus-visible {
     padding: 24px;
   }
 
-  .closing-content,
   .footer-inner {
     align-items: flex-start;
     flex-direction: column;

@@ -70,7 +70,7 @@ export default function Home() {
             alt="Exterior view of the Jays Place building"
             fill
             priority
-            sizes="(max-width: 768px) 100vw, 96vw"
+            sizes="100vw"
             className="hero-photo"
           />
           <div className="hero-tint" aria-hidden="true" />
@@ -83,7 +83,7 @@ export default function Home() {
             aria-hidden="true"
             fill
             priority
-            sizes="(max-width: 768px) 100vw, 96vw"
+            sizes="100vw"
             className="hero-photo hero-foreground"
           />
 
@@ -109,35 +109,21 @@ export default function Home() {
           </div>
 
           <div className="hero-bottom">
-            <div className="hero-copy-card">
-              <p className="eyebrow hero-eyebrow">
-                <span className="status-dot" aria-hidden="true" />
-                Coming soon
-              </p>
+            <div className="hero-copy">
+              <p className="eyebrow hero-eyebrow">Coming soon</p>
               <h1 id="hero-title">
                 A new place to feel more alive.
               </h1>
               <p className="hero-description">
-                Wellness, recreation, and meaningful time together are finding
-                a home at Jays Place.
+                Wellness, recreation, and time together. Jays Place is coming
+                soon.
               </p>
               <a href="#vision" className="primary-link">
                 Explore the vision
                 <span aria-hidden="true">&#8599;</span>
               </a>
             </div>
-
-            <div className="hero-aside">
-              <span className="hero-aside-number">01 / 01</span>
-              <p>The good part is just beginning.</p>
-              <span className="hero-aside-line" aria-hidden="true" />
-              <span>First look at Jays Place</span>
-            </div>
           </div>
-
-          <a className="hero-scroll" href="#vision">
-            Scroll to explore <span aria-hidden="true">&#8595;</span>
-          </a>
         </section>
 
         <section id="vision" className="vision-section" aria-labelledby="vision-title">
@@ -194,20 +180,6 @@ export default function Home() {
               ))}
             </Reveal>
           </div>
-        </section>
-
-        <section className="closing-section" aria-labelledby="closing-title">
-          <Reveal className="section-container closing-content">
-            <div>
-              <p className="eyebrow">This is only the beginning</p>
-              <h2 id="closing-title">
-                Something good is on its way.
-              </h2>
-            </div>
-            <a href="#top" className="closing-link">
-              Back to the first look <span aria-hidden="true">&#8599;</span>
-            </a>
-          </Reveal>
         </section>
       </main>
 
